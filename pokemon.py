@@ -43,6 +43,7 @@ class Treinador:
 class Jogador(Treinador):
     def __init__(self,nome,pokemons):
         super().__init__(nome,pokemons) 
+
     def escolherPokemon(self):
         while True:
             print(f"Escolha seu pokemon: ")
@@ -98,9 +99,9 @@ def BatalhaPokemon(treinador1, treinador2):
     elif (p1tipo is "Eletrico" and p2tipo is "Fogo"):
         print(f"O vencedor foi {p1._especie} do treinador {p1._nome}")
     
-    elif (p1tipo is "Eletrico" and p2tipo is "Agua"):
+    elif (p1tipo is "Eletrico" and p2tipo is "Aquatico"):
         print(f"O vencedor foi {p1._especie} do treinador {p1._nome}")
-    elif (p1tipo is "Agua" and p2tipo is "Eletrico"):
+    elif (p1tipo is "Aquatico" and p2tipo is "Eletrico"):
         print(f"O vencedor foi {p2._especie} do treinador {p2._nome}")
 
     elif (p1tipo is "Eletrico" and p2tipo is "Grama"):
@@ -117,6 +118,7 @@ Aquatico("James", "Tentacruel", "Aquatico", 50,50,50),
 Elétrico("Wendel", "Electabuzz", "Eletrico", 50,50,50)
 ]
 jogador = Jogador("Wendel",[PokemonsDisp[0],PokemonsDisp[1],PokemonsDisp[2],PokemonsDisp[3]])
-inimigo = Inimigo("James", [PokemonsDisp])
+inimigo = Inimigo("James", PokemonsDisp)
+
 
 BatalhaPokemon(jogador, inimigo)
